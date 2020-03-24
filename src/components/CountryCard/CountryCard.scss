@@ -1,0 +1,30 @@
+.CountryCard {
+  display: flex;
+  flex-direction: column;
+  background-color: color(background, light);
+  padding: 22px;
+  border-radius: 3px;
+}
+
+.CountryCard__country {
+  @include typography(header);
+  margin-bottom: 16px;
+}
+
+.CountryCard__metric {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.CountryCard__metric:nth-child(2) {
+  color: color(highlight);
+}
+
+.CountryCard__metric:nth-child(3) {
+  color: color(success);
+}
+
+.CountryCard__metric:nth-child(4) {
+  margin-bottom: 0;
+  color: color(danger);
+}

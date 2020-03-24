@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+$typography-sans-serif-title: 'Open Sans', 'Arial';
+$typography-sans-serif-body: 'Roboto', 'Arial';
+
+$typography-map: (
+  display: (
+    font-family: $typography-sans-serif-title,
+    font-size: 32px,
+    font-weight: 700,
+  ),
+  header: (
+    font-family: $typography-sans-serif-title,
+    font-size: 20px,
+    font-weight: 700,
+  ),
+  sub-header: (
+    font-family: $typography-sans-serif-title,
+    font-size: 16px,
+    font-weight: 600,
+  ),
+  body: (
+    font-family: $typography-sans-serif-body,
+    font-size: 14px,
+    font-weight: 400,
+  ),
+);

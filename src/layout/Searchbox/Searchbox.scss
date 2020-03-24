@@ -1,0 +1,26 @@
+.Searchbox {
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+.Searchbox::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background: color(highlight);
+}
+
+.Searchbox__input {
+  @include typography(header);
+  height: 36px;
+  background: none;
+  width: 100%;
+  border: none;
+}

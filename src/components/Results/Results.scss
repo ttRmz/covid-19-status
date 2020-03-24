@@ -1,0 +1,9 @@
+.Results {
+  margin-top: 44px;
+  display: grid;
+  grid-gap: 1.8rem;
+  grid-template-columns: repeat(auto-fit, 320px);
+  width: 100%;
+  margin-bottom: 48px;
+  justify-content: center;
+}

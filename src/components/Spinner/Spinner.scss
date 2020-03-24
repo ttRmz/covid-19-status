@@ -1,0 +1,50 @@
+$d: 175.6449737548828;
+
+@mixin size($number) {
+  width: $number + px;
+  min-width: $number + px;
+  height: $number + px;
+  min-height: $number + px;
+}
+
+.Spinner {
+  @include size(48);
+  animation: Spinner--contanim 2s linear infinite;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transform: rotate(-90deg);
+    stroke: color(highlight);
+    stroke-dasharray: 1, 300;
+    stroke-dashoffset: 0;
+    animation: Spinner--strokeanim 3s ease infinite;
+    transform-origin: center center;
+  }
+}
+
+@keyframes Spinner--strokeanim {
+  0% {
+    stroke-dasharray: 1, 300;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 150, 300;
+    stroke-dashoffset: -$d / 4;
+  }
+
+  100% {
+    stroke-dasharray: 150, 300;
+    stroke-dashoffset: -$d;
+  }
+}
+
+@keyframes Spinner--contanim {
+  100% {
+    transform: rotate(360deg);
+  }
+}

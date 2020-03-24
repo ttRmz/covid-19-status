@@ -1,0 +1,24 @@
+.App {
+  background-color: color(background, dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 32px $footer_height;
+}
+
+.App__loader {
+  margin-top: 68px;
+}
+
+.App__title {
+  @include typography(display);
+  margin-top: 68px;
+  margin-bottom: 48px;
+  display: inline-flex;
+}
+
+.App__title > i {
+  margin-right: 8px;
+  color: color(success);
+}
