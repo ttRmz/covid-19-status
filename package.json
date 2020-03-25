@@ -1,17 +1,17 @@
 {
-  "name": "covid-19-status",
+  "name": "covid_19_status",
   "version": "1.0.0",
-  "description": "Covid 19 status",
+  "description": "COVID 19 Repporting web application",
   "author": {
     "name": "Ramirez Tristan",
     "email": "tristan.rami@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ttRmz/covid-19-status"
+    "url": "https://github.com/ttRmz/COVID_19_Status"
   },
   "bugs": {
-    "url": "https://github.com/ttRmz/covid-19-status/issues"
+    "url": "https://github.com/ttRmz/COVID_19_Status/issues"
   },
   "scripts": {
     "start": "run-p start:*",
