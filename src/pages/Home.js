@@ -22,7 +22,7 @@ export default function Home() {
     loading: () => <Spinner className="Home__loader" />,
     error: () => 'there was an error... sorry',
     success: data => {
-      const sortedList = matchSorter(data.Countries, search, {
+      const sortedList = matchSorter(data.Countries, search.trim(''), {
         keys: ['Country', 'Slug'],
       })
 
