@@ -1,6 +1,5 @@
 $primary: #7f5af0;
 $secondary: #94a1b2;
-$highlight: #7f5af0;
 $danger: #ef4565;
 $success: #2cb67d;
 $background: #16161a;
@@ -18,11 +17,6 @@ $colors: (
     base: $secondary,
     light: lighten($secondary, $lighten),
     dark: darken($secondary, $darken),
-  ),
-  'highlight': (
-    base: $highlight,
-    light: lighten($highlight, $lighten),
-    dark: darken($highlight, $darken),
   ),
   'danger': (
     base: $danger,
