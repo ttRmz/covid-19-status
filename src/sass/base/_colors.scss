@@ -2,6 +2,7 @@ $primary: #7f5af0;
 $secondary: #94a1b2;
 $danger: #ef4565;
 $success: #2cb67d;
+$star: #faae2b;
 $background: #16161a;
 
 $lighten: 5;
@@ -27,6 +28,11 @@ $colors: (
     base: $success,
     light: lighten($success, $lighten),
     dark: darken($success, $darken),
+  ),
+  'star': (
+    base: $star,
+    light: lighten($star, $lighten),
+    dark: darken($star, $darken),
   ),
   'background': (
     base: $background,

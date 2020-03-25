@@ -1,14 +1,19 @@
+$CountryCard-padding: 22px;
+$CountryCard-star-size: 32px;
+
 .CountryCard {
   display: flex;
   flex-direction: column;
   background-color: color(background, light);
-  padding: 22px;
+  padding: $CountryCard-padding;
   border-radius: 3px;
+  position: relative;
 }
 
 .CountryCard__country {
   @include typography(header);
   margin-bottom: 16px;
+  max-width: calc(100% - #{$CountryCard-star-size});
 }
 
 .CountryCard__metric {
@@ -27,4 +32,22 @@
 .CountryCard__metric:nth-child(4) {
   margin-bottom: 0;
   color: color(danger);
+}
+
+.CountryCard__star {
+  width: $CountryCard-star-size;
+  min-width: $CountryCard-star-size;
+  height: $CountryCard-star-size;
+  min-height: $CountryCard-star-size;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(50%, -50%);
+  top: $CountryCard-star-size;
+  right: $CountryCard-star-size;
+}
+
+.CountryCard__star--filled {
+  color: color(star);
 }

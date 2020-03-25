@@ -21,3 +21,29 @@
   margin-right: 8px;
   color: color(success);
 }
+
+.Home__subtitle {
+  @include typography(header);
+  margin-top: 68px;
+  position: relative;
+}
+
+.Home__subtitle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+  height: 4px;
+  background: color(primary);
+  width: 48px;
+}
+
+.Home__update {
+  font-size: 10px;
+  color: color(secondary, light);
+}
+
+.Home__empty {
+  margin-top: 44px;
+}

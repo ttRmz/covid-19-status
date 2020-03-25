@@ -2,6 +2,9 @@
   "title": "Stats COVID-19",
   "search": "Rechercher un pays",
   "update": "Dernière mise à jour",
+  "starred": "Pays suivis",
+  "other": "Autres pays",
+  "empty": "Aucun pays ne correspond à votre rescherche",
   "metric": {
     "total": "cas référencés",
     "active": "malades",

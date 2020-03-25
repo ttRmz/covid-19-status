@@ -2,6 +2,9 @@
   "title": "COVID-19 Status",
   "search": "Find country",
   "update": "Last update",
+  "starred": "Starred countries",
+  "other": "Other countries",
+  "empty": "No country found",
   "metric": {
     "total": "total cases",
     "active": "active cases",
