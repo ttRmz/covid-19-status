@@ -3,7 +3,6 @@
 
 // main styles
 @import './sass/main.scss';
-@import './app/App.scss';
 
 //components
 @import './components/index.scss';
@@ -11,3 +10,6 @@
 //layout
 @import './layout/Footer/Footer.scss';
 @import './layout/Searchbox/Searchbox.scss';
+
+// import pages
+@import './pages/Home.scss';

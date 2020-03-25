@@ -1,5 +1,4 @@
-.App {
-  background-color: color(background, dark);
+.Home {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,18 +6,18 @@
   padding: 0 32px $footer_height;
 }
 
-.App__loader {
+.Home__loader {
   margin-top: 68px;
 }
 
-.App__title {
+.Home__title {
   @include typography(display);
   margin-top: 68px;
   margin-bottom: 48px;
   display: inline-flex;
 }
 
-.App__title > i {
+.Home__title > i {
   margin-right: 8px;
   color: color(success);
 }

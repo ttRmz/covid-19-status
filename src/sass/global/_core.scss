@@ -105,6 +105,7 @@ body {
   color: color(neutral, light);
   max-height: 100vh;
   @include typography(body);
+  background-color: color(background, dark);
 }
 
 /* make sure to set some focus styles for accessibility */

@@ -1,0 +1,16 @@
+{
+  "title": "Stats COVID-19",
+  "search": "Rechercher un pays",
+  "update": "Dernière mise à jour",
+  "metric": {
+    "total": "cas référencés",
+    "active": "malades",
+    "recovered": "rétablis",
+    "death": "décès"
+  },
+  "footer": {
+    "made": "Fait avec",
+    "by": "par",
+    "tag": "#ResteChezToi"
+  }
+}

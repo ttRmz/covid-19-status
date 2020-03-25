@@ -1,0 +1,16 @@
+{
+  "title": "COVID-19 Status",
+  "search": "Find country",
+  "update": "Last update",
+  "metric": {
+    "total": "total cases",
+    "active": "active cases",
+    "recovered": "recovered",
+    "death": "deaths"
+  },
+  "footer": {
+    "made": "Made with",
+    "by": "by",
+    "tag": "#StayAtHome"
+  }
+}
