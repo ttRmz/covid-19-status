@@ -53,7 +53,16 @@ export default function Home() {
             {t('update')} :{' '}
             {formatRelative(new Date(data.Date), new Date(), {
               locale: LOCALES[language],
-            })}
+            })}{' '}
+            (source :{' '}
+            <a
+              href="https://covid19api.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              covid19api
+            </a>
+            )
           </h4>
 
           {!!followingCountries?.length && (
