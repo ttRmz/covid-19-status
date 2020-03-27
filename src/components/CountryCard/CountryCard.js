@@ -29,17 +29,26 @@ export function CountryCard({ value }) {
 
       <ul>
         <li className="CountryCard__metric">
-          {value.TotalConfirmed} {t('metric.total')}
+          <i>
+            {value.TotalConfirmed} {t('metric.active')}{' '}
+          </i>{' '}
+          {value.NewConfirmed > 0 &&
+            `(+ ${value.NewConfirmed} ${t('metric.today')})`}
         </li>
+
         <li className="CountryCard__metric">
-          {value.TotalConfirmed - value.TotalRecovered - value.TotalDeaths}{' '}
-          {t('metric.active')}
+          <i>
+            {value.TotalRecovered} {t('metric.recovered')}
+          </i>{' '}
+          {value.NewRecovered > 0 &&
+            `(+ ${value.NewRecovered} ${t('metric.today')})`}
         </li>
+
         <li className="CountryCard__metric">
-          {value.TotalRecovered} {t('metric.recovered')}
-        </li>
-        <li className="CountryCard__metric">
-          {value.TotalDeaths} {t('metric.death')}
+          <i>
+            {value.TotalDeaths} {t('metric.death')}
+          </i>{' '}
+          {value.NewDeaths > 0 && `(+ ${value.NewDeaths} ${t('metric.today')})`}
         </li>
       </ul>
     </div>

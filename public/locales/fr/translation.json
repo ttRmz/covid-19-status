@@ -6,10 +6,10 @@
   "other": "Autres pays",
   "empty": "Aucun pays ne correspond à votre rescherche",
   "metric": {
-    "total": "cas référencés",
     "active": "malades",
     "recovered": "rétablis",
-    "death": "décès"
+    "death": "décès",
+    "today": "aujourd'hui"
   },
   "footer": {
     "made": "Fait avec",

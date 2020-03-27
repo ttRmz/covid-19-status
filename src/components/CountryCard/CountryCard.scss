@@ -17,19 +17,24 @@ $CountryCard-star-size: 32px;
 }
 
 .CountryCard__metric {
-  font-weight: bold;
   margin-bottom: 4px;
+  font-size: 12px;
 }
 
-.CountryCard__metric:nth-child(2) {
+.CountryCard__metric i {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.CountryCard__metric:nth-child(1) {
   color: color(primary);
 }
 
-.CountryCard__metric:nth-child(3) {
+.CountryCard__metric:nth-child(2) {
   color: color(success);
 }
 
-.CountryCard__metric:nth-child(4) {
+.CountryCard__metric:nth-child(3) {
   margin-bottom: 0;
   color: color(danger);
 }

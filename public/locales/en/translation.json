@@ -6,10 +6,10 @@
   "other": "Other countries",
   "empty": "No country found",
   "metric": {
-    "total": "total cases",
     "active": "active cases",
     "recovered": "recovered",
-    "death": "deaths"
+    "death": "deaths",
+    "today": "today"
   },
   "footer": {
     "made": "Made with",
