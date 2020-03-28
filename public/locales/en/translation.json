@@ -9,7 +9,7 @@
     "active": "active cases",
     "recovered": "recovered",
     "death": "deaths",
-    "today": "today"
+    "today": "in the last 24h"
   },
   "footer": {
     "made": "Made with",
