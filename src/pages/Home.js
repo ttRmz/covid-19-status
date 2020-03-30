@@ -24,23 +24,12 @@ export default function Home() {
     loading: () => <Spinner className="Home__loader" />,
     error: () => 'there was an error... sorry',
     success: data => {
-      const { followingCountries, otherCountries } = data.Countries.reduce(
-        (acc, curr) => {
-          if (!curr.Country) return acc
-
-          if (countries.includes(getCountryId(curr))) {
-            return {
-              ...acc,
-              followingCountries: [...(acc?.followingCountries || []), curr],
-            }
-          }
-
-          return {
-            ...acc,
-            otherCountries: [...(acc?.otherCountries || []), curr],
-          }
+      const { followingCountries, otherCountries, global } = getSeparatedData(
+        data,
+        countries,
+        {
+          global: { Country: t('worldwide'), Slug: 'worldwide' },
         },
-        {},
       )
 
       const sortedList = matchSorter(otherCountries, search.trim(''), {
@@ -65,6 +54,8 @@ export default function Home() {
             )
           </h4>
 
+          <Results data={[global]} global />
+
           {!!followingCountries?.length && (
             <>
               <h3 className="Home__subtitle">{t('starred')}</h3>
@@ -72,6 +63,8 @@ export default function Home() {
               <h3 className="Home__subtitle">{t('other')}</h3>
             </>
           )}
+
+          <Searchbox value={search} onChange={setSearch} />
 
           {!!sortedList.length ? (
             <Results data={sortedList} />
@@ -90,9 +83,43 @@ export default function Home() {
         {t('title')}
       </h1>
 
-      <Searchbox value={search} onChange={setSearch} />
-
       {statusResult[status](data)}
     </main>
   )
+}
+
+function getSeparatedData(data, countries, initialAcc) {
+  return data.Countries.reduce((acc, curr) => {
+    if (!curr.Country) return acc
+
+    let newAcc
+
+    if (countries.includes(getCountryId(curr))) {
+      newAcc = {
+        ...acc,
+        followingCountries: [...(acc?.followingCountries || []), curr],
+      }
+    } else
+      newAcc = {
+        ...acc,
+        otherCountries: [...(acc?.otherCountries || []), curr],
+      }
+
+    return {
+      ...newAcc,
+      global: {
+        ...acc.global,
+        TotalConfirmed: addToAccSum(acc, curr, 'TotalConfirmed'),
+        NewConfirmed: addToAccSum(acc, curr, 'NewConfirmed'),
+        TotalRecovered: addToAccSum(acc, curr, 'TotalRecovered'),
+        NewRecovered: addToAccSum(acc, curr, 'NewRecovered'),
+        TotalDeaths: addToAccSum(acc, curr, 'TotalDeaths'),
+        NewDeaths: addToAccSum(acc, curr, 'NewDeaths'),
+      },
+    }
+  }, initialAcc)
+}
+
+function addToAccSum(acc, curr, key) {
+  return curr[key] > 0 ? (acc.global[key] || 0) + curr[key] : acc.global[key]
 }

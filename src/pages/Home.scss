@@ -13,7 +13,7 @@
 .Home__title {
   @include typography(display);
   margin-top: 68px;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   display: inline-flex;
 }
 
@@ -24,7 +24,7 @@
 
 .Home__subtitle {
   @include typography(header);
-  margin-top: 68px;
+  margin-top: 36px;
   position: relative;
 }
 

@@ -5,6 +5,7 @@
   "starred": "Pays suivis",
   "other": "Autres pays",
   "empty": "Aucun pays ne correspond à votre recherche",
+  "worldwide": "Dans le monde",
   "metric": {
     "active": "malades",
     "recovered": "rétablis",

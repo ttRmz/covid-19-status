@@ -10,6 +10,10 @@ $CountryCard-star-size: 32px;
   position: relative;
 }
 
+.CountryCard--highlighted {
+  box-shadow: 10px 10px 2px 0px color(primary);
+}
+
 .CountryCard__country {
   @include typography(header);
   margin-bottom: 16px;

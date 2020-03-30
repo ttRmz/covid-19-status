@@ -5,6 +5,7 @@
   "starred": "Starred countries",
   "other": "Other countries",
   "empty": "No country found",
+  "worldwide": "Worldwide",
   "metric": {
     "active": "active cases",
     "recovered": "recovered",
