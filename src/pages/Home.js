@@ -24,12 +24,9 @@ export default function Home() {
     loading: () => <Spinner className="Home__loader" />,
     error: () => 'there was an error... sorry',
     success: data => {
-      const { followingCountries, otherCountries, global } = getSeparatedData(
+      const { followingCountries, otherCountries } = getSeparatedData(
         data,
         countries,
-        {
-          global: { Country: t('worldwide'), Slug: 'worldwide' },
-        },
       )
 
       const sortedList = matchSorter(otherCountries, search.trim(''), {
@@ -54,7 +51,12 @@ export default function Home() {
             )
           </h4>
 
-          <Results data={[global]} global />
+          <Results
+            data={[
+              { ...data.Global, Country: t('worldwide'), Slug: 'worldwide' },
+            ]}
+            global
+          />
 
           {!!followingCountries?.length && (
             <>
@@ -88,38 +90,19 @@ export default function Home() {
   )
 }
 
-function getSeparatedData(data, countries, initialAcc) {
+function getSeparatedData(data, countries) {
   return data.Countries.reduce((acc, curr) => {
     if (!curr.Country) return acc
 
-    let newAcc
-
     if (countries.includes(getCountryId(curr))) {
-      newAcc = {
+      return {
         ...acc,
         followingCountries: [...(acc?.followingCountries || []), curr],
       }
     } else
-      newAcc = {
+      return {
         ...acc,
         otherCountries: [...(acc?.otherCountries || []), curr],
       }
-
-    return {
-      ...newAcc,
-      global: {
-        ...acc.global,
-        TotalConfirmed: addToAccSum(acc, curr, 'TotalConfirmed'),
-        NewConfirmed: addToAccSum(acc, curr, 'NewConfirmed'),
-        TotalRecovered: addToAccSum(acc, curr, 'TotalRecovered'),
-        NewRecovered: addToAccSum(acc, curr, 'NewRecovered'),
-        TotalDeaths: addToAccSum(acc, curr, 'TotalDeaths'),
-        NewDeaths: addToAccSum(acc, curr, 'NewDeaths'),
-      },
-    }
-  }, initialAcc)
-}
-
-function addToAccSum(acc, curr, key) {
-  return curr[key] > 0 ? (acc.global[key] || 0) + curr[key] : acc.global[key]
+  }, {})
 }
