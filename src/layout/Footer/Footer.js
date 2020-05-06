@@ -11,7 +11,7 @@ export function Footer() {
         {t('footer.made')}{' '}
         <Icon className="Footer__icon--hearth" name="heart-solid" />{' '}
         {t('footer.by')}{' '}
-        <a className="Footer__link" href="https://ttrmz.netlify.com/">
+        <a className="Footer__link" href="https://tristan-ramirez.me/">
           Tristan Ramirez
         </a>
       </span>
