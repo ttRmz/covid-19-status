@@ -23,6 +23,7 @@
     "build:react-app": "react-scripts build"
   },
   "dependencies": {
+    "@ttrmz/react-utils": "^1.0.0",
     "classnames": "^2.2.6",
     "date-fns": "^2.11.0",
     "i18next": "^19.3.3",
