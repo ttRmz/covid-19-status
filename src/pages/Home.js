@@ -1,3 +1,4 @@
+import { useInput } from '@ttrmz/react-utils'
 import { formatRelative } from 'date-fns'
 import { enUS, fr } from 'date-fns/locale'
 import matchSorter from 'match-sorter'
@@ -9,7 +10,6 @@ import { useFollowingCountriesContext } from '../contexts/follow'
 import { Searchbox } from '../layout/Searchbox'
 import { useSummary } from '../server/summary'
 import { getCountryId } from '../utils/getCountryId'
-import { useInput } from '../utils/useInput'
 
 const LOCALES = { fr, en: enUS }
 
